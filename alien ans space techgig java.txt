@@ -1,0 +1,31 @@
+package tecgig;
+
+/* Read input from STDIN. Print your output to STDOUT*/
+
+import java.io.*;
+import java.util.*;
+public class CandidateCode {
+   public static void main(String args[] ) throws Exception {
+
+	//Write code here
+   Scanner s=new Scanner(System.in);
+   int[] arr = new int[4];
+   arr[0]=s.nextInt();
+   arr[1]=s.nextInt();
+   arr[2]=s.nextInt();
+   arr[3]=s.nextInt();
+   float total_minutes_of_travel =(arr[2]*60)+arr[3];
+   for(float i=1;i<=total_minutes_of_travel;i++)
+   {
+      arr[1]+=1;
+      if(arr[1]>59)
+      {
+         arr[1]=0;
+         arr[0]+=1;
+         if(arr[0]>23)
+         {
+            arr[0]=0;
+         }    }   }
+         System.out.println(String.format("%02d",arr[0])+ " " +String.format("%02d",arr[1]));
+   }
+}
