@@ -1,0 +1,27 @@
+#include <stdio.h>
+
+int main()
+{
+    int i,j,rows,m=3,n=1,val;
+    rows=3;
+    for(i=rows;i>=1;i--){
+        for(j=1;j<=i;j++){
+            val=m*n;
+            printf("%d\t",val);
+            n++;
+        }
+        printf("\n");
+    }
+    
+  for(i=1;i<=rows-1;i++){
+      for(j=0;j<=i;j++){
+          printf("%d\t",m*n);
+          n++;
+      }
+      printf("\n");
+      
+  }
+
+    return 0;
+}
+
