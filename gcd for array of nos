@@ -1,0 +1,31 @@
+#include <stdio.h>
+//int find_gcd_array(int ,int);
+int gcd(int,int);
+int main()
+{
+    int n,i,j;
+    printf("enter the no of elements");
+    scanf("%d",&n);
+    int arr[n];
+    printf("enter the array elements");
+    for(i=0;i<n;i++){
+        scanf("%d",&arr[i]);
+    }
+    printf("%d",find_gcd_array(arr,n));
+}
+int find_gcd_array(int arr[],int n){
+    int  result=arr[0];
+    for(int i=1;i<n;i++){
+        result=gcd(arr[i],result);
+        if(result==1)
+           return 1;
+    }
+          return result;
+}
+int gcd(int a, int b)
+{
+    if(a==0)
+      return b;
+    else
+     return gcd(b%a,a);
+}
