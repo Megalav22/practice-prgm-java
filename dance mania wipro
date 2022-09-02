@@ -1,0 +1,38 @@
+#include<stdio.h>
+int main()
+{
+ int i,numOfEvents=1, activity_ID[numOfEvents],rem; 
+ printf("Enter the number of events in dance mania");
+ scanf("%d",&numOfEvents);
+ printf("Enter the activity IDs of the activities in the event ");
+ 
+ for(i=0;i<numOfEvents;i++)
+ {
+ scanf("%d",&activity_ID[i]);
+ 
+ }
+ for(i=0;i<numOfEvents;i++)
+ {
+    int sum=0;
+  while(activity_ID[i]>0)
+  {
+    
+    rem=activity_ID[i]%10;
+    sum=sum+rem;
+    activity_ID[i]=activity_ID[i]/10;
+    
+    //printf("sum=%d",sum);
+  }  
+  printf("sum=%d",sum);
+ }
+    
+    
+ 
+ //printf("sum=%d",sum);
+ return 0;
+ }
+
+
+
+
+
