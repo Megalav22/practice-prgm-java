@@ -1,0 +1,17 @@
+import java.util.Scanner;
+public class Main
+{
+	public static void main(String[] args) {
+    Scanner sc=new Scanner(System.in);
+    String str=sc.nextLine();
+    int len=str.length();
+    int num,rem=0;
+    int i;
+    for(i=0;i<len;i++){
+        num=rem*10+(str.charAt(i)-'0');
+        rem=num%11;
+    }
+   System.out.println(rem);
+	}
+}
+
