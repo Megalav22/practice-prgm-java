@@ -1,0 +1,29 @@
+mport java.util.Scanner;
+
+public class MirrorPattern {
+
+
+	public static void main(String[] args) {
+		
+		
+        Scanner sc=new Scanner(System.in);
+        int n=sc.nextInt();
+        int i,spaces,num;
+        for(i=1;i<=n;i++)
+        {
+            for(spaces=1;spaces<=n-i;spaces++)
+            {
+                //System.out.println(' ');
+                for(num=1;num<=i;num++)
+                {
+                    System.out.println(i);
+                }
+                System.out.println(' ');
+            }
+            System.out.println();
+        }
+
+		
+	}
+
+}
