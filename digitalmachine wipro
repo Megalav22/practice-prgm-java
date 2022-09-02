@@ -1,0 +1,43 @@
+#include <stdio.h>
+
+int main()
+{
+    int N,max=0,i,flag;
+    char binary[N];
+    int count=0;
+    scanf("%d",&N);
+    for(i=0;i<N;i++)
+    {
+    scanf("%s",binary);
+    }
+    for(i=0;i<N;i++)
+    {
+        if (binary[i]=='1')
+        {
+            count+=1;
+            flag=1;
+            
+            if(count>max)
+            {
+                max=count;
+                printf("%d",max);
+            }
+        
+        }  
+        else if  (binary[i]=='0' && flag==1){
+            count=0;
+            flag=0;
+        }
+        
+        /*if(count>max){
+                max=count;
+                printf("%d",max);
+        }*/
+        
+    }
+    
+   
+    return 0;
+}
+
+
